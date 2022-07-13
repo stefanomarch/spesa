@@ -1,0 +1,16 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-graphql
+
+AllCops:
+  NewCops: enable
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
